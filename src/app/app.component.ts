@@ -6,7 +6,6 @@ import  {TasksComponent} from './tasks.component';
 
 @Component({
   selector: 'app-root',
-  directives:[TasksComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 
