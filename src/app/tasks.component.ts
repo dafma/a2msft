@@ -2,7 +2,7 @@ import  {Component} from '@angular/core';
 
 @Component({
     selector: 'tasks',
-    template: " <h4 [class.red]='toggle' > it is a task component</h4> <h4 [ngClass]='{red:toggle, blue:toggle}' > it is a task component</h4>",
+    templateUrl: './task.component.html' ,
     styles: [".red{color:red}", ".blue{color:blue}"]
 
 })
@@ -11,4 +11,17 @@ import  {Component} from '@angular/core';
 export  class TasksComponent{
     constructor(){}
     toggle:boolean = true;
+    //structural directives
+    //*ngIf  solo se muestra su es true o la condicion es verdadera
+    imTrue = false;
+    tasks: Array<string>=["primert", "segundot", "tercert"];
+
+    //Data flow interpolation
+    myNumber = 7;
+    //data flow - event binding
+    doThis(){
+        console.log("you clicked the button");
+        alert("Button clicked");
+    }
+    num = "";
 }

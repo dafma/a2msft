@@ -1,0 +1,24 @@
+<h4 [class.red]='toggle' > it is a task component</h4> 
+<h4 [ngClass]='{red:toggle, blue:toggle}' > it is a task component</h4>
+<h4 *ngIf='imTrue'>fd</h4>
+
+<hr>
+<h3>Task list aplication with  *ngFor</h3>
+<ul>
+    <li *ngFor="let task of tasks">
+        {{task}}
+    </li>
+</ul>
+
+<hr>
+<h3>Data flow Interpolation</h3>
+<span>{{myNumber}}</span>
+<input type="text" [value]="myNumber">
+
+<h3>Data flow event binding</h3>
+<button (click)="doThis()">pulsa</button>
+<button (mouseenter)="doThis()">pulsa</button>
+
+<h3>Data flow 2 way binding</h3>
+<input type="text" [value]="num" (keyup)="num = $event.target.value">
+<input type="text" [(ngModel)]="num">
