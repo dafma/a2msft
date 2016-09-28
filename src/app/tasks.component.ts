@@ -1,7 +1,9 @@
 import  {Component} from '@angular/core';
+import {ProviderCrudService} from './provider-crud.service';
 
 @Component({
     selector: 'tasks',
+    providers: [ProviderCrudService],
     templateUrl: './task.component.html' ,
     styles: [".red{color:red}", ".blue{color:blue}"]
 
@@ -9,7 +11,7 @@ import  {Component} from '@angular/core';
 
 
 export  class TasksComponent{
-    constructor(){}
+    constructor(public taskService: ProviderCrudService){}
     toggle:boolean = true;
     //structural directives
     //*ngIf  solo se muestra su es true o la condicion es verdadera
